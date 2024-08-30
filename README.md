@@ -77,7 +77,7 @@ pip install -r requirements.txt
 以下のコマンドでFastAPIサーバーを起動します。
 
 ```bash
-uvicorn app.main:app --reload
+uvicorn api.main:app --reload
 ```
 
 これで、開発サーバーが`http://127.0.0.1:8000`で起動します。
