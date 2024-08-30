@@ -14,7 +14,7 @@
 
 ## 前提条件
 
-- Python 3.8 以上
+- Python 3.10 以上
 - ノートテキストや画像が含まれるPowerPointファイル
 - Voicevox APIキー（必要に応じて）
 
@@ -34,7 +34,7 @@ cd API_pptx2movie
 `venv`を使用して仮想環境を作成します。
 
 ```bash
-python3 -m venv venv
+python -m venv venv
 ```
 
 仮想環境を有効化します。
@@ -49,6 +49,18 @@ python3 -m venv venv
 
   ```bash
   .\venv\Scripts\activate
+  ```
+- Windowsでの仮想環境実行時に以下のエラーが出た場合:
+
+  ```bash
+    +  .\venv\Scripts\activate
+    + CategoryInfo          : セキュリティ エラー: (: ) []、PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+  ```
+  
+- 下記のコマンドで実行ポリシーを変更
+    ```bash
+  Set-ExecutionPolicy RemoteSigned -Scope Process
   ```
 
 ### 3. 必要なパッケージのインストール
