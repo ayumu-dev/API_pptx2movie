@@ -4,7 +4,7 @@
 
 ## プロジェクト構成
 
-- `app/`: FastAPIのアプリケーションコードが含まれています。
+- `api/`: FastAPIのアプリケーションコードが含まれています。
 - `data/`: 抽出された画像や音声ファイルが保存されるディレクトリです。
 - `scripts/`: ユーティリティスクリプトが含まれています。
 - `requirements.txt`: アプリケーションを実行するために必要なPythonパッケージが記載されています。
@@ -15,8 +15,8 @@
 ## 前提条件
 
 - Python 3.10 以上
-- ノートテキストや画像が含まれるPowerPointファイル
-- Voicevox APIキー（必要に応じて）
+- ノートテキストや画像が含まれるPowerPointファイル (テスト時...)
+- Voicevox Engine (後ほど...)
 
 ## セットアップ手順
 
@@ -29,7 +29,7 @@ git clone https://github.com/ayumu-dev/API_pptx2movie.git
 cd API_pptx2movie
 ```
 
-### 2. 仮想環境の作成と有効化
+### 2. 仮想環境の作成と有効化と非有効化
 
 `venv`を使用して仮想環境を作成します。
 
@@ -61,6 +61,13 @@ python -m venv venv
 - 下記のコマンドで実行ポリシーを変更
     ```bash
   Set-ExecutionPolicy RemoteSigned -Scope Process
+  ```
+    
+仮想環境を非有効化します。
+- Windows & Mac:
+
+  ```bash
+  deactivate
   ```
 
 ### 3. 必要なパッケージのインストール
